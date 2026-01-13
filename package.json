@@ -1,9 +1,0 @@
-{
-  "name": "gotoxcancel-extension",
-  "version": "1.0.0",
-  "description": "Chrome extension to redirect twitter/x to xcancel",
-  "type": "module",
-  "scripts": {
-    "test": "node test.js"
-  }
-}
