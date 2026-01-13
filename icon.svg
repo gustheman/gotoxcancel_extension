@@ -1,0 +1,40 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filter for Distressed/Cracked Texture -->
+    <filter id="distress">
+      <feTurbulence type="fractalNoise" baseFrequency="0.15" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <!-- Filter for Glitch Artifacts -->
+    <filter id="glitch" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+      <feOffset dx="-2" dy="0" result="shifted"/>
+    </filter>
+  </defs>
+
+  <!-- Background (Faded/Asymmetrical) -->
+  <rect x="0" y="0" width="128" height="128" fill="#1a1a1a" rx="20" />
+  
+  <!-- Group for the X Logo -->
+  <g transform="translate(64, 64) scale(0.7) translate(-64, -64)">
+    
+    <!-- Glitch Shadow (Cyan) -->
+    <text x="64" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="100" 
+          fill="#00ffff" text-anchor="middle" opacity="0.4" filter="url(#glitch)"
+          transform="translate(-3, -2)">X</text>
+          
+    <!-- Glitch Shadow (Magenta) -->
+    <text x="64" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="100" 
+          fill="#ff00ff" text-anchor="middle" opacity="0.4" filter="url(#glitch)"
+          transform="translate(3, 2)">X</text>
+
+    <!-- Main Cracked X (Faded White) -->
+    <text x="64" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="100" 
+          fill="#e0e0e0" text-anchor="middle" filter="url(#distress)">X</text>
+          
+    <!-- Asymmetrical Scratch -->
+    <path d="M 20 20 L 100 100" stroke="#1a1a1a" stroke-width="2" opacity="0.6" filter="url(#distress)"/>
+  </g>
+</svg>
