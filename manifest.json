@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "GoToXCancel",
+  "version": "1.4.0",
+  "description": "Instantly redirects x.com and twitter.com links to xcancel.com",
+  "permissions": [
+    "declarativeNetRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

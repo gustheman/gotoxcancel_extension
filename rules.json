@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "xcancel.com",
+          "scheme": "https"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||twitter.com",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "xcancel.com",
+          "scheme": "https"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||x.com",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
