@@ -17,8 +17,8 @@
   <!-- Background (Faded/Asymmetrical) -->
   <rect x="0" y="0" width="128" height="128" fill="#1a1a1a" rx="20" />
   
-  <!-- Group for the X Logo -->
-  <g transform="translate(64, 64) scale(0.7) translate(-64, -64)">
+  <!-- Group for the X Logo and Prohibitory Sign -->
+  <g transform="translate(64, 64) scale(0.75) translate(-64, -64)">
     
     <!-- Glitch Shadow (Cyan) -->
     <text x="64" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="100" 
@@ -33,8 +33,14 @@
     <!-- Main Cracked X (Faded White) -->
     <text x="64" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="100" 
           fill="#e0e0e0" text-anchor="middle" filter="url(#distress)">X</text>
-          
-    <!-- Asymmetrical Scratch -->
-    <path d="M 20 20 L 100 100" stroke="#1a1a1a" stroke-width="2" opacity="0.6" filter="url(#distress)"/>
+    
+    <!-- Prohibitory Circle (Red) -->
+    <circle cx="64" cy="64" r="55" stroke="#cc0000" stroke-width="12" fill="none" opacity="0.8" filter="url(#distress)" />
+    
+    <!-- Red Slash Line -->
+    <line x1="25" y1="25" x2="103" y2="103" stroke="#cc0000" stroke-width="12" opacity="0.8" filter="url(#distress)" />
+
+    <!-- Extra Asymmetrical Scratches -->
+    <path d="M 10 30 L 118 100" stroke="#1a1a1a" stroke-width="1.5" opacity="0.4" filter="url(#distress)"/>
   </g>
 </svg>
